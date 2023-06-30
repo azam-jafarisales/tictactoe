@@ -116,7 +116,7 @@ function win(a, b, c) {
                 winner = "o";
             }
             setTimeout(() => {
-                alert(a.textContent + " " + 'is winner');
+                alert("the winner of this round is " + " " + a.textContent);
                 clearHomes();
                 roundCount--;
                 if (roundCount == 0) {
