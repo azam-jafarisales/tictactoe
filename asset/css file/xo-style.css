@@ -1,0 +1,542 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(120, 120, 158, 0.699);
+}
+
+/* main content */
+
+.wrapper {
+    height: 70%;
+    width: 60%;
+    background-image: linear-gradient(rgba(120, 120, 158, 0.699), rgba(137, 78, 177, 0.479), rgba(168, 46, 107, 0.479));
+    margin: 100px auto;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: relative;
+    padding: 0 50px;
+
+}
+
+.header {
+    width: 100%;
+    height: 15%;
+    background-color: rgb(211, 30, 142);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 3em;
+    font-weight: bolder;
+    color: white;
+
+}
+
+.maincontent {
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.maincontent div {
+    width: 33.3333333%;
+    height: 33.333333%;
+    border: 10px double white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* entry */
+
+span {
+    color: white;
+    font-size: 80px;
+    font-weight: bolder;
+}
+
+.details {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+/* records */
+
+.record {
+    display: flex;
+    width: 70%;
+    height: 20%;
+    justify-content: space-between;
+}
+
+.record span {
+    width: 30%;
+    height: 100%;
+    font-size: 40px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* rounds */
+
+.round {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.round span {
+    font-size: 40px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* turns */
+
+.turn {
+    width: 40%;
+    font-weight: bolder;
+    font-size: 40px;
+    border-radius: 10px;
+    padding: 0 5px;
+    color: white;
+}
+
+/* timer animation */
+svg{
+    width: 150px;
+    height: 150px;
+    transform: rotateY(-180deg);
+    text-align: center;
+}
+
+circle {
+    stroke-dasharray: 315px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    fill: none;
+    stroke-width: 4px;
+    stroke: rgb(211, 30, 142);
+    animation: 30s linear infinite;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes countdown {
+    from {
+        stroke-dashoffset: 0px;
+    }
+
+    to {
+        stroke-dashoffset: 312px;
+    }
+}
+
+.countdown {
+    position: absolute;
+    top: 65px;
+    left: 51%;
+}
+
+/* refresh button */
+
+button {
+    /* position: absolute;
+    top: 80%;
+    left: 45%; */
+    width: 80px;
+    height: 50px;
+}
+
+#modal{
+    width: 70%;
+    height: 70%;
+    background-color: rgb(215, 145, 224);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    z-index: 99;
+     visibility: hidden;
+}
+
+#modal i{
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+#modal-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+li{
+    list-style-type: none;
+    font-size: 70px;
+} 
+
+@media(max-width:576px){
+    .wrapper {
+        height: 100vh;
+        width: 90%;
+        margin: 60px auto;
+        padding-bottom: 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header {
+        height: 50px;
+        padding-top: 10px;
+        font-size: 1em;
+    }
+
+    .maincontent {
+        width: 100%;
+        height: 300px;
+        margin-top: 10px;
+    }
+
+    span {
+        font-size: 60px;
+    }
+
+    .details {
+        width: 100%;
+        height: 400px;
+    }
+
+    .maincontent div {
+        border: 1px double white;
+    }
+
+    .record {
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+    }
+
+    .round {
+        width: 100%;
+    }
+
+    span {
+        font-size: 60px;
+    }
+
+    .record span {
+        width: 100%;
+        height: 40%;
+        font-size: 25px;
+    }
+
+    .round span {
+        font-size: 25px;
+    }
+
+    .turn {
+        font-size: 25px;
+    }
+}
+
+@media(min-width:576px) and (max-width:768px) {
+
+    .wrapper {
+        height: auto;
+        width: 90%;
+        margin: 60px auto;
+        padding-bottom: 30px;
+    }
+
+    .header {
+        height: 50px;
+        padding-top: 10px;
+        font-size: 1em;
+    }
+
+    .maincontent {
+        width: 300px;
+        height: 300px;
+        margin-top: 100px;
+    }
+
+    .maincontent div {
+        border: 1px double white;
+    }
+
+    /* entry */
+
+    span {
+        font-size: 60px;
+    }
+
+    .details {
+        width: 300px;
+        height: 300px;
+        margin-top: 100px;
+    }
+
+    /* records */
+
+    .record {
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-left: 30px;
+    }
+
+    .record span {
+        width: 100%;
+        height: 40%;
+        font-size: 25px;
+    }
+
+    /* rounds */
+
+    .round {
+        width: 100%;
+        flex-direction: column;
+        padding-left: 30px;
+    }
+
+    .round span {
+        font-size: 25px;
+    }
+
+    /* turns */
+
+    .turn {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    /* timer */
+
+    .countdown {
+        left: 51%;
+    }
+
+    /* refresh button */
+
+    button {
+        position: absolute;
+        top: 80%;
+        left:65%;
+        width: 80px;
+        height: 50px;
+    }
+
+}
+
+@media(min-width:768px) and (max-width:1200px) {
+    
+    body {
+        height: auto;
+    }
+
+    .wrapper {
+        height: auto;
+        width: 90%;
+        margin: 60px auto;
+        padding-bottom: 70px;
+    }
+
+    .header {
+        height: 60px;
+        padding-top: 10px;
+        font-size: 2em;
+    }
+
+    .maincontent {
+        width: 400px;
+        height: 400px;
+        margin-top: 100px;
+    }
+
+    .maincontent div {
+        border: 1px double white;
+    }
+
+    /* entry */
+
+    span {
+        font-size: 70px;
+    }
+
+    .details {
+        width: 400px;
+        height: 400px;
+        margin-top: 100px;
+      
+    }
+
+    /* records */
+
+    .record {
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-left: 50px;
+    }
+
+    .record span {
+        width: 100%;
+        height: 40%;
+        font-size: 30px;
+    }
+
+    /* rounds */
+
+    .round {
+        width: 100%;
+        flex-direction: column;
+        padding-left: 50px;
+    }
+
+    .round span {
+        font-size: 30px;
+    }
+
+    /* turns */
+
+    .turn {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    /* timer */
+
+    .countdown {
+        left: 51%;
+    }
+
+    /* refresh button */
+
+    button {
+        position: absolute;
+        right: 10%;
+        width: 80px;
+        height: 50px;
+        top: 80%;
+    }
+
+}
+
+@media(min-width:1200px) and (max-width:1600px) {
+    
+    body {
+        height: auto;
+    }
+
+    .wrapper {
+        height: auto;
+        width: 70%;
+        margin: 60px auto;
+        padding: 50px 50px;
+    }
+
+    .header {
+        height: 70px;
+        padding-top: 10px;
+        font-size: 2em;
+    }
+
+    .maincontent {
+        width: 400px;
+        height: 400px;
+        margin-top: 120px;
+    }
+
+    .maincontent div {
+        border: 2px solid white;
+    }
+
+    /* entry */
+
+    span {
+        font-size: 70px;
+    }
+
+    .details {
+        width: 400px;
+        height: 400px;
+        margin-top: 120px;
+    }
+
+    /* records */
+
+    .record {
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        padding-left: 35px;
+    }
+
+    .record span {
+        width: 100%;
+        height: 50%;
+        font-size: 40px;
+    }
+
+    /* rounds */
+
+    .round {
+        width: 100%;
+        padding-left: 35px;
+    }
+
+    .round span {
+        font-size: 40px;
+    }
+
+    /* turns */
+
+    .turn {
+        width: 50%;
+        font-size: 40px;
+    }
+
+    /* timer */
+
+    .countdown {
+        left: 51%;
+    }
+
+    /* refresh button */
+
+    button {
+        width: 80px;
+        height: 50px;
+    }
+
+}
+
