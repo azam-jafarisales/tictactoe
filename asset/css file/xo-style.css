@@ -261,6 +261,11 @@ li{
     .turn {
         font-size: 20px;
     }
+
+    .countdown {
+        left: 51%;
+        top: 25%;
+    }
 }
 
 @media(min-width:576px) and (max-width:768px) {
