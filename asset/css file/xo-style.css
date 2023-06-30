@@ -275,6 +275,10 @@ li{
     li{
         font-size: 20px;
     } 
+
+    #modal{
+        height: 30%;
+    }
 }
 
 @media(min-width:576px) and (max-width:768px) {
@@ -364,6 +368,10 @@ li{
         width: 80px;
         height: 50px;
     }
+
+    li{
+        font-size: 30px;
+    } 
 
 }
 
