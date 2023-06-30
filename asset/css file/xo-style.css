@@ -201,6 +201,7 @@ li{
 
 @media(max-width:576px){
     .wrapper {
+        height: auto;
         width: 90%;
         margin: 30px auto;
         padding-bottom: 10px;
