@@ -138,7 +138,6 @@ circle {
     stroke: rgb(211, 30, 142);
     animation: 30s linear infinite;
     animation-fill-mode: forwards;
-
 }
 
 @keyframes countdown {
@@ -272,6 +271,10 @@ li{
         left: 51%;
         top: 30%;
     }
+
+    li{
+        font-size: 20px;
+    } 
 }
 
 @media(min-width:576px) and (max-width:768px) {
